@@ -1,5 +1,6 @@
 package ude.kh.exception.model.service;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 public class ExceptionService {
@@ -136,7 +137,40 @@ public class ExceptionService {
 		
 	}
 	
+	public void ex4() {
+		
+		// throws : 호출한 메서드에게 예외를 던짐
+		// 			호출한 메서드에게 예외를 처리하라고 위임하는 행위
+		// throw : 예외 강제 발생 구문
+		
+		try {
+			methodA();
+			
+		} catch(Exception e) {
+			// Exception : 모든 예외의 최상위 부모
+			// Exception이 catch 매개변수로 작성되었다.
+			// == 예외 종류 상관없이 모두 처리
+			
+			e.printStackTrace();
+			// 발생한 예외가 메서드와 위치에 모든 내용을 출력
+			// 예외 발생 지점 출력	
+		}
+	}
 	
+	public void methodA() throws IOException{
+		methodB();
+	}
+	
+	public void methodB() throws IOException {
+		methodC();
+	}
+	
+	public void methodC() throws IOException{
+		
+		// 예외 강제 발생 구문
+		throw new IOException();
+		
+	}
 	
 	
 	
