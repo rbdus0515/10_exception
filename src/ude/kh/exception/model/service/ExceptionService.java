@@ -29,7 +29,7 @@ public class ExceptionService {
 		} catch(ArithmeticException e ) {
 			// try에서 던져진 예외를 catch문 매개변수 e로 잡음
 			
-			System.out.println("infinity");
+			System.out.println("infinity"); // 처리코드
 		}
 		
 		if(input2 != 0) {
@@ -38,7 +38,7 @@ public class ExceptionService {
 			System.out.println("infinity");
 		}
 		
-		// 발생하는 예외 중 일부 예외는 try-catch
+		// 발생하는 예외 중 일부 예외는 try-catch 구문 사용 안해도
 		
 		
 	}
