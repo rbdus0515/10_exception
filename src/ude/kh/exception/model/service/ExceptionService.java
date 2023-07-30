@@ -39,6 +39,8 @@ public class ExceptionService {
 		}
 		
 		// 발생하는 예외 중 일부 예외는 try-catch 구문 사용 안해도
+		// 예외 상황을 방지할 수 있다.
+		// 일부 예외 == 대부분 UncheckException
 		
 		
 	}
@@ -117,10 +119,10 @@ public class ExceptionService {
 			// 2) catch문 매개변수 활용
 			// 메게변수 e : 예외 관련된 정보 + 예외 관련 기능
 			
-			System.out.println( e.getClass()); // 어떤 예외 클래스인가?
+			System.out.println( e.getClass() ); // 어떤 예외 클래스인가?
 			// class java.lang.ArithmeticException
 
-			System.out.println( e.getMessage()); // 예외 발생시 출력된 내용
+			System.out.println( e.getMessage() ); // 예외 발생시 출력된 내용
 			// / by zero
 			
 			System.out.println( e ); // e.toString();
